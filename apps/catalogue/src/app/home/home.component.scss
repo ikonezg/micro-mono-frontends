@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+h2 {
+  width: 100%;
+  text-align: center;
+}
+.message {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  p {
+    max-width: 800px;
+  }
+}

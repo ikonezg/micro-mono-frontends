@@ -7,12 +7,19 @@ import { HeaderComponent } from './core/header/header.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HeaderModule } from './core/header/header.module';
 import { FooterModule } from './core/footer/footer.module';
+import { RouterModule } from '@angular/router';
+import { AppRoutingRoutingModule } from './app-routing.module';
+import { MenuComponent } from './core/menu/menu.component';
+import { CoreModule } from './core/core.module';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AppRoutingRoutingModule,
     MatSidenavModule,
+    CoreModule,
     HeaderModule,
     FooterModule,
   ],

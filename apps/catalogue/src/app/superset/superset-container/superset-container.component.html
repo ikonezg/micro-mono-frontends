@@ -1,0 +1,49 @@
+<div class="wrapper">
+  <mat-drawer-container autosize>
+    <mat-drawer #drawer mode="over">
+      <div class="time-settings">
+        <label id="example-radio-group-label">Pick your refresh time</label>
+        <mat-radio-group
+          aria-labelledby="example-radio-group-label"
+          class="example-radio-group"
+          [(ngModel)]="setTime">
+          <mat-radio-button class="example-radio-button" [value]="0">
+          None
+          </mat-radio-button>
+          <mat-radio-button class="example-radio-button" [value]="10">
+          10 sec
+          </mat-radio-button>
+          <mat-radio-button class="example-radio-button" [value]="30">
+          30 sec
+          </mat-radio-button>
+          <mat-radio-button class="example-radio-button" [value]="60">
+          1 min
+          </mat-radio-button>
+          <mat-radio-button class="example-radio-button" [value]="300">
+          5 min
+          </mat-radio-button>
+          <mat-radio-button class="example-radio-button" [value]="600">
+          10 min
+          </mat-radio-button>
+        </mat-radio-group>
+
+      </div>
+    </mat-drawer>
+    <iframe
+    #super
+    width="600"
+    height="400"
+    seamless
+    frameBorder="0"
+    scrolling="no"
+    [src]="itemUrl"
+  >
+  </iframe>
+
+  </mat-drawer-container>
+
+ 
+  <div class="settings">
+    <button mat-icon-button (click)="drawer.toggle()"><mat-icon>settings</mat-icon></button>
+  </div>
+</div>

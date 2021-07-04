@@ -5,11 +5,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   @Output() toggleSidenav = new EventEmitter();
   constructor() {}
-
-  ngOnInit(): void {}
 
   onToggleSidenav() {
     this.toggleSidenav.emit();
