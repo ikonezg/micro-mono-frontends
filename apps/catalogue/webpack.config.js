@@ -24,11 +24,11 @@ module.exports = {
     new ModuleFederationPlugin({
       
         // For remotes (please adjust)
-        // name: "catalogue",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './apps/catalogue/src/app/app.component.ts',
-        // },        
+        name: "catalogue",
+        filename: "remoteEntry.js",
+        exposes: {
+            './SupersetContainer': './apps/catalogue/src/app/superset/superset-container/superset-container.component.ts',
+        },        
         
         // For hosts (please adjust)
         // remotes: {

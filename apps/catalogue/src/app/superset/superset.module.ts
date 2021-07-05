@@ -8,6 +8,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatRadioModule } from '@angular/material/radio';
 import { FormsModule } from '@angular/forms';
+import { SupersetService } from './superset.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', redirectTo: 'widgets', pathMatch: 'full' },
@@ -24,7 +26,9 @@ const routes: Routes = [
     MatSidenavModule,
     FormsModule,
     MatRadioModule,
+    HttpClientModule,
   ],
   exports: [SupersetContainerComponent],
+  providers: [SupersetService],
 })
 export class SupersetModule {}

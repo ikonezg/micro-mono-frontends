@@ -6,6 +6,7 @@
         <mat-radio-group
           aria-labelledby="example-radio-group-label"
           class="example-radio-group"
+          (ngModelChange)="timeChange($event)"
           [(ngModel)]="setTime">
           <mat-radio-button class="example-radio-button" [value]="0">
           None
