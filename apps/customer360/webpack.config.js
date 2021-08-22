@@ -9,7 +9,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "catalogue",
+    uniqueName: "customer360",
     publicPath: "auto"
   },
   optimization: {
@@ -24,25 +24,23 @@ module.exports = {
     new ModuleFederationPlugin({
       
         // For remotes (please adjust)
-        name: "catalogue",
-        filename: "remoteEntry.js",
-        exposes: {
-            // './SupersetContainer': './superset/superset-container/superset-container.component.ts',
-            './SupersetContainer': './apps/catalogue/src/app/superset/superset-container/superset-container.component.ts',
-        },        
+        // name: "customer360",
+        // filename: "remoteEntry.js",
+        // exposes: {
+        //     './Component': './apps/customer360/src/app/app.component.ts',
+        // },        
         
         // For hosts (please adjust)
         // remotes: {
-        //     "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
+        //     "catalogue": "catalogue@http://localhost:3000/remoteEntry.js",
 
         // },
 
         shared: {
-          "@angular/core": { singleton: true, strictVersion: false }, 
-          "@angular/common": { singleton: true, strictVersion: false }, 
-          "@angular/common/http": { singleton: true, strictVersion: false }, 
-          "@angular/router": { singleton: true, strictVersion: false },
-          "@angular/material": { singleton: true, strictVersion: false},
+          "@angular/core": { singleton: true, strictVersion: true }, 
+          "@angular/common": { singleton: true, strictVersion: true }, 
+          "@angular/common/http": { singleton: true, strictVersion: true }, 
+          "@angular/router": { singleton: true, strictVersion: true },
 
           ...sharedMappings.getDescriptors()
         }

@@ -33,6 +33,13 @@
     "catalogue-e2e": {
       "tags": [],
       "implicitDependencies": ["catalogue"]
+    },
+    "customer360": {
+      "tags": []
+    },
+    "customer360-e2e": {
+      "tags": [],
+      "implicitDependencies": ["customer360"]
     }
   }
 }

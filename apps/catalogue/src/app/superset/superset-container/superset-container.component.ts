@@ -3,6 +3,8 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
+  Inject,
+  InjectionToken,
   Input,
   OnDestroy,
   OnInit,
@@ -11,6 +13,7 @@ import {
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { interval, Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+// import { REMOTE_WIDGET_DATA } from '../../tokens/remote_widget_data';
 
 @Component({
   selector: 'ng-mono360-superset-container',
@@ -19,7 +22,7 @@ import { takeUntil } from 'rxjs/operators';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SupersetContainerComponent implements OnInit, OnDestroy {
-  @Input() url: string;
+  @Input() url = '';
 
   @ViewChild('super', { static: false }) iframe: ElementRef;
 
@@ -28,7 +31,12 @@ export class SupersetContainerComponent implements OnInit, OnDestroy {
 
   private _isKilled$ = new Subject();
 
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(
+    private sanitizer: DomSanitizer // @Inject(REMOTE_WIDGET_DATA) data?: any
+  ) {
+    // console.log('REmote Data', data);
+  }
+
   ngOnDestroy(): void {
     this._isKilled$.next();
     this._isKilled$.complete();
