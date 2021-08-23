@@ -7,12 +7,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./test-widget.component.css'],
 })
 export class TestWidgetComponent implements OnInit {
-  id: string;
+  id = 200; //default  value
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((param) => {
-      this.id = param.id;
+      console.log(param);
+      if (param.id) {
+        this.id = param.id;
+      }
     });
   }
 }

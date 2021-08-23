@@ -12,9 +12,10 @@ import { AppRoutingRoutingModule } from './app-routing.module';
 import { MenuComponent } from './core/menu/menu.component';
 import { CoreModule } from './core/core.module';
 import { TestWidgetComponent } from './widgets/test-widget/test-widget.component';
+import { LiveWidgetsComponent } from './widgets/live-widgets/live-widgets.component';
 
 @NgModule({
-  declarations: [AppComponent, TestWidgetComponent],
+  declarations: [AppComponent, TestWidgetComponent, LiveWidgetsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
