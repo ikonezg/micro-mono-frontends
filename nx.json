@@ -34,12 +34,12 @@
       "tags": [],
       "implicitDependencies": ["catalogue"]
     },
-    "customer360": {
+    "customer360app": {
       "tags": []
     },
-    "customer360-e2e": {
+    "customer360app-e2e": {
       "tags": [],
-      "implicitDependencies": ["customer360"]
+      "implicitDependencies": ["customer360app"]
     }
   }
 }

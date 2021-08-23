@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'customer360',
+  displayName: 'customer360app',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/customer360',
+  coverageDirectory: '../../coverage/apps/customer360app',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

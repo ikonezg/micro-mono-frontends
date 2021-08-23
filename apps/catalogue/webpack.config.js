@@ -29,6 +29,7 @@ module.exports = {
         exposes: {
             // './SupersetContainer': './superset/superset-container/superset-container.component.ts',
             './SupersetContainer': './apps/catalogue/src/app/superset/superset-container/superset-container.component.ts',
+            './TestWidget': './apps/catalogue/src/app/widgets/test-widget/test-widget.component.ts'
         },        
         
         // For hosts (please adjust)

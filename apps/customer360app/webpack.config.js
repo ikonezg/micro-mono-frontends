@@ -9,7 +9,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "customer360",
+    uniqueName: "customer360app",
     publicPath: "auto"
   },
   optimization: {
@@ -24,10 +24,10 @@ module.exports = {
     new ModuleFederationPlugin({
       
         // For remotes (please adjust)
-        // name: "customer360",
+        // name: "customer360app",
         // filename: "remoteEntry.js",
         // exposes: {
-        //     './Component': './apps/customer360/src/app/app.component.ts',
+        //     './Component': './apps/customer360app/src/app/app.component.ts',
         // },        
         
         // For hosts (please adjust)
